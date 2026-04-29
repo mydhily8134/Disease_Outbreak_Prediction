@@ -1,0 +1,48 @@
+1.Hepatitis Performance:
+Random Forest: RMSE=38.92, Accuracy=88.47%
+Gradient Boosting: RMSE=553.53, Accuracy=61.27%
+ARIMA: RMSE=177.10, Accuracy=75.26%
+Prophet: RMSE=40.07, Accuracy=43.24%
+>> Best Model: Random Forest (Accuracy: 88.47%)
+
+2.Measles Performance:
+Random Forest: RMSE=1.40, Accuracy=89.94%
+Gradient Boosting: RMSE=7.86, Accuracy=21.07%
+ARIMA: RMSE=1.91, Accuracy=75.72%
+Prophet: RMSE=4593.21, Accuracy=0.03%
+>> Best Model: Random Forest (Accuracy: 89.94%)
+
+3.Mumps Performance:
+Random Forest: RMSE=1.96, Accuracy=83.19%
+Gradient Boosting: RMSE=9.52, Accuracy=54.35%
+ARIMA: RMSE=4.02, Accuracy=67.64%
+Prophet: RMSE=222.42, Accuracy=4.47%
+>> Best Model: Random Forest (Accuracy: 83.19%)
+
+4.Pertussis Performance:
+Random Forest: RMSE=18.35, Accuracy=96.99%
+Gradient Boosting: RMSE=36.05, Accuracy=92.97%
+ARIMA: RMSE=76.27, Accuracy=85.64%
+Prophet: RMSE=123.40, Accuracy=75.98%
+>> Best Model: Random Forest (Accuracy: 96.99%)
+
+5.Polio Performance:
+Random Forest: RMSE=0.72, Accuracy=83.71%
+Gradient Boosting: RMSE=2.31, Accuracy=63.77%
+ARIMA: RMSE=1.76, Accuracy=59.13%
+Prophet: RMSE=275.85, Accuracy=1.90%
+>> Best Model: Random Forest (Accuracy: 83.71%)
+
+6.Rubella Performance:
+Random Forest: RMSE=0.36, Accuracy=93.73%
+Gradient Boosting: RMSE=1.18, Accuracy=52.00%
+ARIMA: RMSE=0.44, Accuracy=92.26%
+Prophet: RMSE=177.79, Accuracy=0.79%
+>> Best Model: Random Forest (Accuracy: 93.73%)
+
+7.Smallpox Performance:
+Random Forest: RMSE=0.20, Accuracy=97.63%
+Gradient Boosting: RMSE=0.62, Accuracy=90.66%
+ARIMA: RMSE=0.67, Accuracy=90.50%
+Prophet: RMSE=94.07, Accuracy=10.64%
+>> Best Model: Random Forest (Accuracy: 97.63%)

@@ -1,0 +1,195 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Medical/Clean Theme - Light Mode */
+    --background: 195 40% 98%;
+    /* Very light cyan/blue tint */
+    --foreground: 222 47% 11%;
+    /* Darker Slate for better readability */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    /* Dark Slate */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 183 20% 94%;
+    /* Slightly darker teal-grey for secondary bgs */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 25% 40%;
+    /* Darker muted text */
+
+    --accent: 183 90% 35%;
+    /* Darker Teal for better contrast */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 85%;
+    /* Darker borders */
+    --input: 215 20% 85%;
+    --ring: 183 90% 35%;
+
+    --radius: 1rem;
+
+    /* Custom gradient tokens */
+    --gradient-start: 195 40% 98%;
+    --gradient-mid: 185 30% 95%;
+    --gradient-end: 210 30% 98%;
+
+    /* Glass effect tokens */
+    --glass-bg: 0 0% 100% / 0.8;
+    /* More opaque for better text contrast */
+    --glass-border: 185 30% 90% / 0.6;
+    --glass-shadow: 195 30% 40% / 0.08;
+
+    /* Feature colors */
+    --feature-pink: 330 80% 60%;
+    --feature-purple: 250 60% 60%;
+    --feature-cyan: 185 80% 40%;
+    --feature-blue: 210 80% 50%;
+
+    --sidebar-background: 195 40% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 183 20% 92%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 215 20% 85%;
+    --sidebar-ring: 183 90% 35%;
+  }
+
+  .dark {
+    /* Medical/Clean Theme - Dark Mode (if needed, keeping consistent with slate/cyan) */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 183 50% 40%;
+    /* Brighter teal for dark mode primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 183 40% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 183 50% 40%;
+
+    --gradient-start: 222 47% 11%;
+    --gradient-mid: 217 33% 15%;
+    --gradient-end: 222 47% 11%;
+
+    --glass-bg: 222 47% 11% / 0.7;
+    --glass-border: 217 33% 17% / 0.5;
+    --glass-shadow: 0 0% 0% / 0.3;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 183 50% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 183 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg,
+        hsl(var(--gradient-start)) 0%,
+        hsl(var(--gradient-mid)) 50%,
+        hsl(var(--gradient-end)) 100%);
+  }
+
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow:
+      0 8px 32px hsl(var(--glass-shadow)),
+      0 0 0 1px hsl(var(--glass-border));
+  }
+
+  .glass-card-strong {
+    background: hsl(0 0% 100% / 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(0 0% 100% / 0.5);
+    box-shadow:
+      0 12px 40px hsl(var(--glass-shadow)),
+      0 0 0 1px hsl(0 0% 100% / 0.3);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg,
+        hsl(var(--primary)) 0%,
+        hsl(var(--feature-blue)) 50%,
+        hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .icon-gradient-pink {
+    background: linear-gradient(135deg, hsl(var(--feature-pink)) 0%, hsl(var(--feature-purple)) 100%);
+  }
+
+  .icon-gradient-purple {
+    background: linear-gradient(135deg, hsl(var(--feature-purple)) 0%, hsl(var(--feature-blue)) 100%);
+  }
+
+  .icon-gradient-cyan {
+    background: linear-gradient(135deg, hsl(var(--feature-cyan)) 0%, hsl(var(--feature-blue)) 100%);
+  }
+
+  .icon-gradient-blue {
+    background: linear-gradient(135deg, hsl(var(--feature-blue)) 0%, hsl(var(--feature-cyan)) 100%);
+  }
+}
