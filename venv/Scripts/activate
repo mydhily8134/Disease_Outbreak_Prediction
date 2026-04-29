@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\mydhi\OneDrive\Desktop\MLPT11DOP-main (1)\venv"
+VIRTUAL_ENV="C:\Users\mydhi\OneDrive\Desktop\MLPT11DOP-main (1)\MLPT11DOP-main\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
